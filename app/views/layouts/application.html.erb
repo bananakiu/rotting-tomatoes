@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RottingTomatoes</title>
+    <title>Rotting Tomatoes</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,62 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="
+    flex justify-between items-center
+    w-full h-16 px-6
+    bg-red-500 text-white
+    ">
+      <div class="text-2xl cursor-pointer">
+        <a href=<%= articles_path %>>
+          Rotting Tomatoes
+        </a>
+      </div>
+      <input id="search" type="text" placeholder="&#x1F50D; Search movies..." class="
+      flex-grow lg:flex-grow-0
+      lg:w-96 px-4 py-1 mx-8
+      rounded-3xl
+      bg-red-700
+      text-white
+      "> 
+      <ul class="
+      hidden lg:flex justify-between items-center
+      h-full
+      text-xl
+      ">
+        <li class="
+        flex justify-center items-center
+        h-full px-4
+        hover:bg-red-700
+        cursor-pointer
+        ">
+          <a href=<%= articles_path %>>
+            Home
+          </a>
+        </li>
+        <li class="
+        flex justify-center items-center
+        h-full px-4
+        hover:bg-red-700
+        cursor-pointer
+        ">
+          <a href=<%= articles_path %>>
+            Reviews
+          </a>
+        </li>
+        <li class="
+        flex justify-center items-center
+        h-full px-4
+        hover:bg-red-700
+        cursor-pointer
+        ">
+          <a href=<%= new_article_path %>>
+            Add review
+          </a>
+        </li>
+      </ul>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>
