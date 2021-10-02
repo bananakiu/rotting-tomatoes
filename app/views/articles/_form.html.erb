@@ -1,0 +1,16 @@
+<%= form_with(model: article) do |form| %>
+    <%# error display %>
+
+    <%# form proper %>
+    <div>
+        <%= form.label :movie %>
+        <%= form.text_field :movie %>
+    </div>
+    <div>
+        <%= form.label :review %>
+        <%= form.text_area :review %>
+    </div>
+    <div>
+        <%= form.submit %>
+    </div>
+<% end %>
