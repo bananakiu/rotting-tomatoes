@@ -1,9 +1,14 @@
-<p id="notice"><%= notice %></p>
+<p class="
+mb-4 <%= notice.include?("destroy") ? "text-red-700" : "text-green-700" if notice != nil%>
+">
+    <%= notice %>
+</p>
 
 <h1 class="text-3xl font-bold mb-4">
     Movie Reviews
 </h1>
-
-<% @articles.each do |review| %>
-    <%= render 'review_card', review: review %>
-<% end %>
+<div class="flex flex-wrap gap-x-8 gap-y-8">
+    <% @articles.each do |review| %>
+        <%= render 'review_card', review: review %>
+    <% end %>
+</div>

@@ -1,6 +1,35 @@
-<h1>Edit Movie Review</h1>
+<div class="
+flex flex-col items-center
+w-full
+">
+    <div class="w-1/2">
+        <div class="flex"> 
+            <%= link_to 'Back to list', articles_path, class: "
+            flex items-center justify-center
+            bg-gray-500 hover:bg-gray-700 text-white
+            py-2 px-6 w-36
+            text-lg
+            rounded-md
+            cursor-pointer
+            mb-4 mr-4
+            " %>
 
-<%= render 'form', article: @article %>
+            <%= link_to 'Back to review', article_path, class: "
+            flex items-center justify-center
+            bg-gray-500 hover:bg-gray-700 text-white
+            py-2 px-6 w-44
+            text-lg
+            rounded-md
+            cursor-pointer
+            mb-4
+            " %>
+        </div>
 
-<%= link_to 'Back to movie review', article_path %>
-<%= link_to 'Back to movie list', articles_path %>
+
+        <h1 class="text-3xl font-bold mb-4">
+            Edit Movie Review
+        </h1>
+
+        <%= render 'form', article: @article %>
+    </div>
+</div>
