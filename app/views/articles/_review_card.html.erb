@@ -16,30 +16,27 @@ bg-white
     mt-6
     bg-red-500 text-white rounded-lg
 
-    ">
-        <div class="
+    ">        
+        <%= link_to 'Show', review, class: "
         w-full px-4
         hover:bg-red-700
         cursor-pointer
         rounded-l-lg
-        ">
-            <%= link_to 'Show', review %>
-        </div>
-        <div class="
+        select-none
+        " %>
+        <%= link_to 'Edit', edit_article_path(review), class: "
         w-full px-4
         hover:bg-red-700
         cursor-pointer
-        ">
-            <%= link_to 'Edit', edit_article_path(review) %>
-        </div>
-        <div class="
+        select-none
+        " %>
+        <%= link_to 'Delete', review, method: :delete, data: { confirm: 'Are you sure you want to delete this review?' }, class: "
         w-full px-4
         hover:bg-red-700
         cursor-pointer
         rounded-r-lg
-        ">
-            <%= link_to 'Delete', review, method: :delete, data: { confirm: 'Are you sure you want to delete this review?' } %>
-        </div>
+        select-none
+        " %>
     </div>
     
 </div>
