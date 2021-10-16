@@ -2,11 +2,8 @@
   "name": "rotting-tomatoes",
   "private": true,
   "dependencies": {
-    "@tailwindcss/postcss7-compat": "^2.2.16",
-    "autoprefixer": "^9.8.7",
     "postcss": "^7.0.38",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.16",
-    "webpack-dev-server": "^3",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
